@@ -308,6 +308,7 @@ class Timebar extends Component {
   }
 
   onInnerBrushMoved() {
+    console.log(this.props.filters.timelineInnerExtent)
     let newExtentPx = d3.event.selection;
     const newExtent = this.getExtent(d3.event.selection);
 

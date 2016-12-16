@@ -158,10 +158,12 @@ const createTrackLayer = function (google) {
     let previousDrawStyle = null;
 
     // console.log('drawtile', showOuterTrack)
-    // let numPointsDrawn = 0;
+    let numPointsDrawn = 0;
     const _drawParams = drawParams;
     const showOuterTrack = _drawParams.timelinePaused || data.latitude.length < SHOW_OUTER_TRACK_BELOW_NUM_POINTS;
     _drawParams.showOuterTrack = showOuterTrack;
+
+    let lastPointDrawn = { x: 0, y: 0 };
 
     for (let i = 0, length = data.latitude.length; i < length; i++) {
       previousDrawStyle = drawStyle;
@@ -170,9 +172,14 @@ const createTrackLayer = function (google) {
       if (!drawStyle || (series && series !== data.series[i])) {
         continue;
       }
-      // numPointsDrawn++;
 
       point = this.drawPoint(overlayProjection, data, i, drawStyle.strokeStyle);
+      const distanceToLastPx = Math.sqrt(Math.pow(point.x - lastPointDrawn.x, 2) + Math.pow(point.y - lastPointDrawn.y, 2))
+      if (distanceToLastPx < 2) {
+        continue;
+      }
+      lastPointDrawn = point;
+      numPointsDrawn++;
 
       if (previousDrawStyle !== drawStyle || (i > 0 && data.series[i - 1] !== data.series[i])) {
         if (previousDrawStyle) {
@@ -188,7 +195,8 @@ const createTrackLayer = function (google) {
       this.ctx.lineTo(~~point.x - this.offset.x, ~~point.y - this.offset.y);
     }
 
-    // console.log(numPointsDrawn)
+    console.log(data.latitude.length)
+    console.log(numPointsDrawn)
 
     this.ctx.stroke();
   };

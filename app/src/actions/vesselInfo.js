@@ -72,6 +72,7 @@ export function getVesselTrack(seriesGroup, series = null, zoomToBounds = false)
       urls.push(`${state.map.tilesetUrl}/\
 sub/seriesgroup=${seriesGroup}/${i}-01-01T00:00:00.000Z,${i + 1}-01-01T00:00:00.000Z;0,0,0`);
     }
+    console.log(urls)
     const promises = [];
     for (let urlIndex = 0, length = urls.length; urlIndex < length; urlIndex++) {
       promises.push(new PelagosClient().obtainTile(urls[urlIndex], state.user.token));
