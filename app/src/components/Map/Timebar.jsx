@@ -131,8 +131,9 @@ class Timebar extends Component {
     y.domain([0, d3.max(dummyData.map(d => d.price))]);
 
     this.svg = d3.select('#timeline_svg_container').append('svg')
-      .attr('width', width + 34)
+      .attr('width', width + 50)
       .attr('height', height + durationPickerHeight);
+      // .attr('transform', `translate(${X_OVERFLOW_OFFSET}, 0)`);
 
     this.group = this.svg.append('g')
       .attr('transform', `translate(${X_OVERFLOW_OFFSET},${durationPickerHeight})`);
@@ -273,7 +274,7 @@ class Timebar extends Component {
   resetOuterBrush() {
     currentOuterPxExtent = [0, width];
     outerBrushHandleLeft.attr('transform', 'translate(0,0)');
-    outerBrushHandleRight.attr('transform', `translate(${width - 2}, 0)`);
+    outerBrushHandleRight.attr('transform', `translate(${width + X_OVERFLOW_OFFSET}, 0)`);
   }
 
   redrawOuterBrush(newOuterExtent, currentOuterExtent) {
@@ -388,7 +389,7 @@ class Timebar extends Component {
     }
 
     outerBrushHandleLeft.attr('transform', `translate(${extent[0]}, 0)`);
-    outerBrushHandleRight.attr('transform', `translate(${extent[1] - 2}, 0)`);
+    outerBrushHandleRight.attr('transform', `translate(${extent[1] + X_OVERFLOW_OFFSET}, 0)`);
   }
 
   zoomOut(outerExtentPx, deltaTick) {
