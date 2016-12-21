@@ -26,6 +26,11 @@ class DurationPicker extends Component {
     });
   }
 
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return nextProps.extentPx !== this.props.extentPx &&
+  //     nextProps.extent !== this.props.extent || this.state.showSettingsMenu !== nextState.showSettingsMenu;
+  // }
+
   componentWillUpdate(nextProps, nextState) {
     if (nextState === this.state) return;
 
@@ -33,6 +38,9 @@ class DurationPicker extends Component {
       this.setEventListeners();
     } else {
       this.removeEventListeners();
+    }
+
+    if (nextProps.extentPx !== this.props.extentPx) {
     }
   }
 
@@ -52,6 +60,15 @@ class DurationPicker extends Component {
   }
 
   getLeft(extentPx) {
+    console.log('getLeft');
+    if (this.picker) {
+      const elemProps = this.picker.getBoundingClientRect();
+      const elemViewPortPosition = elemProps.left + elemProps.width;
+
+      return elemViewPortPosition > window.innerWidth ?
+        `${extentPx[1] - elemProps.width}px` : `${extentPx[0]}px`;
+    }
+
     return `${extentPx[0]}px`;
   }
 
@@ -109,7 +126,7 @@ class DurationPicker extends Component {
 
     return (
       <div style={style} className={css['c-durationpicker']}>
-        <div className={css.container}>
+        <div className={css.container} ref={(elem) => { this.picker = elem; }}>
           <img
             alt="settings duration"
             src={SettingsIcon}
