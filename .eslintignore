@@ -1,3 +1,4 @@
 dist/**/*
 app/src/lib
 app/src/util/assignPolyfill.js
+scripts/**/*

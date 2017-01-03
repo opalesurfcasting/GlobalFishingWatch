@@ -223,6 +223,13 @@ class MapLayers extends Component {
         .addTo(this.map, index)
         .done(((layer, cartoLayer) => {
           cartoLayer.setOpacity(layerSettings.opacity);
+          cartoLayer.on('featureClick', function(event, latlng, pos, data) {
+            console.log(layerSettings.source.args.url)
+            console.log(event, latlng, pos, data, data.cartodb_id)
+            console.log(cartoLayer.getSubLayer(0))
+            console.log(cartoLayer.getSubLayer(0).toJSON())
+            cartoLayer.setParams({'ids': data.cartodb_id});
+          });
           addedLayers[layer.title] = cartoLayer;
           resolve();
         }).bind(this, layerSettings));
@@ -321,9 +328,7 @@ class MapLayers extends Component {
     if (!this.vesselsLayer) {
       return;
     }
-    if (
-      this.props.flag !== nextProps.flag
-    ) {
+    if (this.props.flag !== nextProps.flag) {
       this.vesselsLayer.updateFlag(nextProps.flag);
     }
   }

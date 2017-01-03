@@ -1,0 +1,125 @@
+{
+    "auth": {
+      "method": "open"
+    },
+    "version": "0.0.1",
+    "name": "MPA_template2",
+    "placeholders": {
+      "layer0": {
+        "type": "number",
+        "default": 1
+      },
+      "ids": {
+        "type": "sql_literal",
+        "default": "55"
+      }
+    },
+    "layergroup": {
+      "layers": [
+        {
+          "type": "http",
+          "options": {
+            "urlTemplate": "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+            "subdomains": "abcd"
+          }
+        },
+        {
+          "type": "cartodb",
+          "options": {
+            "sql": "SELECT * FROM (SELECT *, string_to_array(name, '') as reporting_id, cartodb_id = 55 as selected FROM no_take_mpas_9_28_wgs_urls) AS wrapped_query WHERE <%= layer0 %>=1",
+            "layer_name": "MPA No Take",
+            "cartocss": "\n\n#no_take_mpas_9_28_wgs_urls[selected = true]{line-color: #ffff00;}\n\n#no_take_mpas_9_28_wgs_urls{\n  polygon-fill: #FFFFFF;\n  polygon-opacity: 0;\n  line-color: #00ff00;\n  line-width: 1.5;\n  line-opacity: 1;\n}",
+            "cartocss_version": "2.1.1",
+            "interactivity": "cartodb_id",
+            "table_name": "\"\".",
+            "attributes": {
+              "id": "cartodb_id",
+              "columns": [
+                "reporting_id",
+                "access",
+                "access_inf",
+                "area",
+                "area_km2",
+                "calc_area",
+                "calc_m_are",
+                "categories",
+                "conserva_",
+                "conserva_2",
+                "conservati",
+                "constancy",
+                "constancy_",
+                "country",
+                "designat_1",
+                "designat_2",
+                "designatio",
+                "fishing",
+                "fishing_ci",
+                "fishing_in",
+                "gov_type",
+                "implementa",
+                "implemente",
+                "int_criter",
+                "is_mpa",
+                "is_point",
+                "iucn_categ",
+                "long_name",
+                "marine",
+                "mgmt_auth",
+                "mgmt_pla_1",
+                "mgmt_plan_",
+                "mpa_id",
+                "access_cit",
+                "name",
+                "no_take",
+                "no_take_ar",
+                "notes",
+                "other_ids",
+                "permanen_1",
+                "permanence",
+                "primary_co",
+                "protecti_",
+                "protecti_2",
+                "protecti_3",
+                "protection",
+                "rep_area",
+                "rep_m_area",
+                "secondary_",
+                "shape_area",
+                "shape_leng",
+                "short_name",
+                "slug",
+                "sovereign",
+                "status",
+                "status_yea",
+                "sub_locati",
+                "summary",
+                "tertiary_c",
+                "usmpa_id",
+                "verifica_1",
+                "verificati",
+                "verified_b",
+                "verified_d",
+                "wdpa_id",
+                "wdpa_notes",
+                "mpa_url"
+              ]
+            }
+          }
+        }
+      ],
+      "stat_tag": "3d8e8416-866c-11e6-8c6b-0242ac110006"
+    },
+    "view": {
+      "zoom": 4,
+      "center": {
+        "lng": -163.9599609375,
+        "lat": 8.885071663468993
+      },
+      "bounds": {
+        "west": -217.880859375,
+        "south": -13.068776734357694,
+        "east": -110.0390625,
+        "north": 29.611670115197377
+      }
+    }
+  }

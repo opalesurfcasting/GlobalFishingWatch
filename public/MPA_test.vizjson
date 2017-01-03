@@ -1,0 +1,476 @@
+vizjson({
+  "id": "3d8e8416-866c-11e6-8c6b-0242ac110006",
+  "version": "0.1.0",
+  "title": "Marine Protected Area No Take",
+  "likes": 0,
+  "description": "<p><a href=\"https://globalfishingwatch.github.io/pelagos-content/mpant.json\">Metadata</a></p>\n",
+  "scrollwheel": false,
+  "legends": true,
+  "url": null,
+  "map_provider": "leaflet",
+  "bounds": [
+    [
+      -13.068776734357694,
+      -217.880859375
+    ],
+    [
+      29.611670115197377,
+      -110.0390625
+    ]
+  ],
+  "center": "[8.885071663468993, -163.9599609375]",
+  "zoom": 4,
+  "updated_at": "2016-10-20T19:53:55+00:00",
+  "layers": [
+    {
+      "options": {
+        "default": true,
+        "url": "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+        "subdomains": "abcd",
+        "minZoom": "0",
+        "maxZoom": "18",
+        "name": "Positron",
+        "className": "positron_rainbow",
+        "attribution": "© <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors © <a href= \"http://cartodb.com/attributions#basemaps\">CartoDB</a>",
+        "urlTemplate": "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+      },
+      "infowindow": null,
+      "tooltip": null,
+      "id": "60f66327-2cc7-401a-909e-f937a346b170",
+      "order": 0,
+      "parent_id": null,
+      "children": [],
+      "type": "tiled"
+    },
+    {
+      "type": "namedmap",
+      "order": 1,
+      "options": {
+        "type": "namedmap",
+        "user_name": "production",
+        "maps_api_template": "http://cartodb.skytruth.org:80/user/{user}",
+        "sql_api_template": "http://cartodb.skytruth.org:80/user/{user}",
+        "tiler_protocol": "http",
+        "tiler_domain": "cartodb.skytruth.org",
+        "tiler_port": "80",
+        "filter": "mapnik",
+        "named_map": {
+          "name": "MPA_template2",
+          "stat_tag": "MPA_template2",
+          "params": {
+            "layer0": 1,
+            "ids": ""
+          },
+          "layers": [
+            {
+              "layer_name": "MPA No Take",
+              "interactivity": "cartodb_id",
+              "visible": true,
+              "infowindow": {
+                "fields": [
+                  {
+                    "name": "reporting_id",
+                    "title": true,
+                    "position": 66
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "access",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "access_inf",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "area",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "area_km2",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "calc_area",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "calc_m_are",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "categories",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "conserva_",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "conserva_2",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "conservati",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "constancy",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "constancy_",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "country",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "designat_1",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "designat_2",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "designatio",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "fishing",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "fishing_ci",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "fishing_in",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "gov_type",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "implementa",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "implemente",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "int_criter",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "is_mpa",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "is_point",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "iucn_categ",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "long_name",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "marine",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "mgmt_auth",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "mgmt_pla_1",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "mgmt_plan_",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "mpa_id",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "access_cit",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "name",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "no_take",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "no_take_ar",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "notes",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "other_ids",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "permanen_1",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "permanence",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "primary_co",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "protecti_",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "protecti_2",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "protecti_3",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "protection",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "rep_area",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "rep_m_area",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "secondary_",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "shape_area",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "shape_leng",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "short_name",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "slug",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "sovereign",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "status",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "status_yea",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "sub_locati",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "summary",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "tertiary_c",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "usmpa_id",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "verifica_1",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "verificati",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "verified_b",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "verified_d",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "wdpa_id",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "wdpa_notes",
+                    "title": true
+                  },
+                  {
+                    "position": 1.7976931348623157e+308,
+                    "name": "mpa_url",
+                    "title": true
+                  }
+                ],
+                "template_name": "",
+                "template": "<div class=\"cartodb-popup v2\">\n  <a href=\"#close\" class=\"cartodb-popup-close-button close\">x</a>\n  <div class=\"cartodb-popup-content-wrapper\">\n    <div class=\"cartodb-popup-content\">\n      <h4>Name</h4>\n      <p>{{name}}</p>\n      <h4>MPA Link</h4>\n      <p><a href=\"{{mpa_url}}\" target=\"new\" style=\"color:gray\">{{mpa_url}}</a></p>\n      <h4>SOURCE</h4>\n\t\t\t<p><a href=\"http://mpatlas.org/\" target=\"_new\" style=\"color:gray\">\n  mpatlas.org</a></p>\n    </div>\n  </div>\n  <div class=\"cartodb-popup-tip-container\"></div>\n</div>",
+                "alternative_names": {},
+                "width": 226,
+                "maxHeight": 180
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "overlays": [
+    {
+      "type": "share",
+      "order": 2,
+      "options": {
+        "display": true,
+        "x": 20,
+        "y": 20
+      },
+      "template": ""
+    },
+    {
+      "type": "search",
+      "order": 3,
+      "options": {
+        "display": true,
+        "x": 60,
+        "y": 20
+      },
+      "template": ""
+    },
+    {
+      "type": "zoom",
+      "order": 6,
+      "options": {
+        "display": true,
+        "x": 20,
+        "y": 20
+      },
+      "template": "<a href=\"#zoom_in\" class=\"zoom_in\">+</a> <a href=\"#zoom_out\" class=\"zoom_out\">-</a>"
+    },
+    {
+      "type": "loader",
+      "order": 8,
+      "options": {
+        "display": true,
+        "x": 20,
+        "y": 150
+      },
+      "template": "<div class=\"loader\" original-title=\"\"></div>"
+    },
+    {
+      "type": "logo",
+      "order": 9,
+      "options": {
+        "display": true,
+        "x": 10,
+        "y": 40
+      },
+      "template": ""
+    }
+  ],
+  "prev": null,
+  "next": null,
+  "transition_options": {
+    "time": 0
+  }
+})
